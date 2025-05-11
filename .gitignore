@@ -1,0 +1,25 @@
+# === Gradle ===
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+gradle-app.setting
+gradlew
+gradlew.bat
+
+# === IntelliJ IDEA ===
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+# === Java ===
+*.class
+
+# === OS 관련 ===
+.DS_Store
+Thumbs.db
+
+# === 로그 및 환경 파일 ===
+*.log
+*.env

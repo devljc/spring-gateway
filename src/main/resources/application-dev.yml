@@ -1,0 +1,18 @@
+service:
+  routes:
+    permit-all:
+      - # The login-service is a microservice that handles user login.
+      - id: login-service
+      - paths:
+          - /public/login
+          - /public/signup
+      - uri: http://auth-service.app-server.svc.cluster.local
+
+    authenticated:
+      # The auth-service is a microservice that handles authentication and authorization.
+      - id: user-service
+        paths:
+          - /v1/user/**
+        uri: http://auth-service.app-server.svc.cluster.local
+
+
