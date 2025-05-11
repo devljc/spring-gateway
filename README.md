@@ -348,8 +348,6 @@ spring:
 
 ## 🔍 참고 자료
 
-## 🔍 참고 자료
-
 - [Spring Cloud Gateway 공식 문서](https://docs.spring.io/spring-cloud-gateway/reference/)
 - [Spring Security - Resource Server (JWT 검증)](https://docs.spring.io/spring-security/reference/servlet/oauth2/resource-server/jwt.html)
 - [JwtAuthenticationToken 클래스 설명 (공식 API 문서)](https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationToken.html)
@@ -360,4 +358,4 @@ spring:
 
 ## 📄 License
 
-MIT License © 2025 leebak
+MIT License © 2025 devljc
