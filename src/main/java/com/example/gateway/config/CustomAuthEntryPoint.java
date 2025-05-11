@@ -1,5 +1,6 @@
 package com.example.gateway.config;
 
+import com.example.core.response.ApiResponse;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.buffer.DataBuffer;
 import org.springframework.http.HttpStatus;
