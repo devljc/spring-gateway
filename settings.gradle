@@ -1,2 +1,3 @@
 rootProject.name = 'gateway'
-includeBuild("core")
+include(":core-common")
+project(":core-common").projectDir = file("core-common")

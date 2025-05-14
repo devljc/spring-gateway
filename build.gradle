@@ -32,6 +32,7 @@ dependencyManagement {
 }
 
 dependencies {
+    implementation project(':core-common')
     implementation 'org.springframework.cloud:spring-cloud-starter-gateway'
     implementation 'org.springframework.boot:spring-boot-starter-data-redis-reactive'
 

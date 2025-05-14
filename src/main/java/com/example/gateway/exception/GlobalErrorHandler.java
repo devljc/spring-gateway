@@ -1,8 +1,9 @@
 package com.example.gateway.exception;
 
 
-import com.example.core.exception.ErrorCode;
-import com.example.core.response.ApiResponse;
+
+import com.example.common.exception.ErrorCode;
+import com.example.common.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
