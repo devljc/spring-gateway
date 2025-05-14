@@ -1,4 +1,4 @@
-package com.leebak.gateway;
+package com.example.gateway;
 
 
 import org.springframework.boot.SpringApplication;

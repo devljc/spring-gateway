@@ -1,18 +1,29 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: https://your-auth-domain.com/v1/auth/jwks
 service:
   routes:
-    permit-all:
-      - # The login-service is a microservice that handles user login.
-      - id: login-service
-      - paths:
-          - /public/login
-          - /public/signup
-      - uri: http://auth-service.app-server.svc.cluster.local
+    # The login-service is a microservice that handles user login.
+    - id: login-service
+      paths: [ /v1/login/**, /v1/logout/** ]
+      uri: http://auth-service.app-server.svc.cluster.local
+      type: PUBLIC
 
-    authenticated:
-      # The auth-service is a microservice that handles authentication and authorization.
-      - id: user-service
-        paths:
-          - /v1/user/**
-        uri: http://auth-service.app-server.svc.cluster.local
+    # The auth-service is a microservice that handles authentication and authorization.
+    - id: user-service
+      paths: [ /v1/user/** ]
+      uri: http://auth-service.app-server.svc.cluster.local
+      type: AUTHENTICATED
+
+    - id: auth-service
+      paths: [ /v1/auth/** ]
+      uri: http://auth-service.app-server.svc.cluster.local
+      type: PUBLIC_RATE_LIMIT
+      rate-limit:
+        requestPerSecond: 10
+        burst: 20
 
 

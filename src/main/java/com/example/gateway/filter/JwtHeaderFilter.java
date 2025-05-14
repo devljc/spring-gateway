@@ -12,8 +12,8 @@ import java.util.Optional;
 @Configuration
 public class JwtHeaderFilter {
 
-    private static final String HEADER_USER_ID = "user-id";
-    private static final String HEADER_USER_ROLE = "user-role";
+    private static final String HEADER_USER_ID = "X-User-Id";
+    private static final String HEADER_USER_ROLE = "X-User-Role";
     private static final String DEFAULT_ROLE = "ROLE_USER";
 
     @Bean
